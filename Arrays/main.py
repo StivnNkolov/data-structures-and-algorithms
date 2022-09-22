@@ -1,6 +1,7 @@
 from array import *
 
 '''
+01.
 Create array
  1 Assign it to a variable
  2 Define the types of elements that it will store    
@@ -13,6 +14,7 @@ print(int_array)
 # If we create empty list and assign values one by one the complexity is O(n)
 
 # '''
+# 02.
 # Insert in array
 #  If array is full we have to make new array and add the new items O(n)
 # '''
@@ -24,6 +26,7 @@ print(int_array)
 # print(doubleArray)
 
 # '''
+# 03.
 # Array traversal
 # '''
 # print('Array traversal:')
@@ -39,6 +42,7 @@ print(int_array)
 # traverse_array(int_array)
 
 # '''
+# 04.
 # Access array element
 # '''
 # print('Access array element:')
@@ -58,33 +62,39 @@ print(int_array)
 #
 # access_element(int_array, 5)
 
-'''
-Find array element
-'''
-print('Find array element:')
-
-
-# Time complexity: O(n)
-# Space complexity: O(1)
-def search_in_array(input_array, searched_element):
-    for el in input_array:
-        if el == searched_element:
-            return True  # Time complexity: O(1)
-        return 'There is no such element in the array.'
-
-
-# Time complexity: O(n*2)
-# Space complexity: O(1)
-def search_in_array2(input_array, searched_element):
-    for el in input_array:
-        if el == searched_element:
-            return f'Index position of element: {input_array.index(el)}'  # Time complexity: O(n)
-        return 'There is no such element in the array.'
-
-
-print(search_in_array(int_array, 20))
-
-
-'''
+# '''
+# 05.
+# Search for array's element
+# '''
+# print('Search for array"s element:')
+#
+#
+# # Time complexity: O(n)
+# # Space complexity: O(1)
+# def search_in_array(input_array, searched_element):
+#     for el in input_array:
+#         if el == searched_element:
+#             return True  # Time complexity: O(1)
+#         return 'There is no such element in the array.'
+#
+#
+# # Time complexity: O(n*2)
+# # Space complexity: O(1)
+# def search_in_array2(input_array, searched_element):
+#     for el in input_array:
+#         if el == searched_element:
+#             return f'Index position of element: {input_array.index(el)}'  # Time complexity: O(n)
+#         return 'There is no such element in the array.'
+#
+#
+# print(search_in_array(int_array, 20))
 
 '''
+06.
+Delete element from array
+Deleting element from array is same as inserting one. The rest elements change their position. 
+'''
+print('Delete element from array:')
+int_array.remove(3)
+# If we remove the last element of array time complexity is O(1) but for any other element it is O(n) so we consider it O(n).
+# Space complexity O(1).
