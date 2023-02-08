@@ -143,25 +143,29 @@ class CSLL:
         node_before_the_one_we_want_to_delete.next = node_we_want_to_delete.next
         return f'You deleted node at location {location}'
 
-    def delete_csll(self):
+    def delete_csll(self):  # TC O(n) SC O(1)
         if self.head is None:
             return 'The CSLL does not exist.'
-        self.head.next = None
         self.head = None
+        self.tail.next = None
         self.tail = None
+        return 'You deleted the CSLL'
 
 
 csll = CSLL()
 print(csll.create_csll(1))
-# print(csll.insert(2, -1))
-# print(csll.insert(3, -1))
-# print(csll.insert(4, -1))
-# print(csll.insert(5, -1))
-# print(csll.insert(6, 0))
-# print(csll.insert(7, 1))
-# print(csll.insert(8, 7))
+print(csll.insert(3, -1))
+print(csll.insert(4, -1))
+print(csll.insert(5, -1))
+print(csll.insert(6, 0))
+print(csll.insert(7, 1))
+print(csll.insert(8, 7))
 
 # csll.traverse()
 # print(csll.search_value(8))
-print(csll.delete_node(1))
+# print(csll.insert(2, -1))
+
+# print(csll.delete_node(1))
+print([el.value for el in csll])
+print(csll.delete_csll())
 print([el.value for el in csll])
