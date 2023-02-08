@@ -2,7 +2,7 @@
 Linked list is a form of sequential collection, and it does not have to be in order. A linked list is made up from
 independent nodes that may contain any type of data and each node has a reference to the next node in the link.
 To reach the last node we must traverse all the nodes before the last one. The linked list in memory is not contiguous.
-LL always has head and tail. Nodes contain two parts: first is the data and the second is the reference to the next node (link).
+SLL always has head and tail. Nodes contain two parts: first is the data and the second is the reference to the next node (link).
 The size of LL is not predefined. Removal and insertion in LL are very efficient in comparison to Array. To find element in LL we
 always need to traverse the LL(in comparison with List;Array).
 There are 4 types of LL: Singly linked list; Circular linked list; Doubly linked list; Circular doubly linked list.
