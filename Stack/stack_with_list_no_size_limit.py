@@ -12,7 +12,6 @@ The biggest problem with stack is that the random access is not possible.
 """
 Creating stack, using python list, without size limit.
 In this case we may have performance leaks as the size grows.
-This is the most optimal as time complexity.
 """
 
 

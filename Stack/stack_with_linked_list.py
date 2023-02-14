@@ -1,6 +1,8 @@
 """
 The last element inserted in the stack will be the first element in the LL.
 The head will always point to the last element in.
+This is the most optimal as time complexity.
+
 """
 
 
