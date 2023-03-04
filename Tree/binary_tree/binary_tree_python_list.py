@@ -41,6 +41,39 @@ class BinaryTree:
         self.pre_order_traversal(2 * index)
         self.pre_order_traversal((2 * index) + 1)
 
+    def in_order_traversal(self, index):  # TC O(n) SC O(n)
+        if index > self.last_used_index:
+            return
+        self.in_order_traversal(index * 2)
+        print(self.custom_list[index])
+        self.in_order_traversal(index * 2 + 1)
+
+    def post_order_traversal(self, index):  # TC O(n) SC O(n)
+        if index > self.last_used_index:
+            return
+        self.post_order_traversal(index * 2)
+        self.post_order_traversal(index * 2 + 1)
+        print(self.custom_list[index])
+
+    def level_order_traversal(self, index):  # TC O(n) SC O(1)
+        for i in range(index, self.last_used_index + 1):
+            print(self.custom_list[i])
+
+    def delete_node(self, node_value):  # TC O(n) SC O(1)
+        if self.last_used_index == 0:
+            return 'The binary tree is empty.'
+        for index in range(1, self.last_used_index + 1):
+            if self.custom_list[index] == node_value:
+                self.custom_list[index] = self.custom_list[self.last_used_index]
+                self.custom_list[self.last_used_index] = None
+                self.last_used_index -= 1
+                return f'Successfully deleted node {node_value}.'
+        return 'No such node in the binary tree.'
+
+    def delete_binary_tree(self):  # TC O(1) SC O(1)
+        self.custom_list = None
+        return 'Successfully deleted binary tree.'
+
 
 binary_tree = BinaryTree(8)
 print(binary_tree.insert_node('Drinks'))
@@ -50,4 +83,7 @@ print(binary_tree.insert_node('Tea'))
 print(binary_tree.insert_node('Coffee'))
 
 # print(binary_tree.search_node('Hot'))
-binary_tree.pre_order_traversal(1)
+binary_tree.level_order_traversal(1)
+print('----')
+print(binary_tree.delete_node('Hot'))
+binary_tree.level_order_traversal(1)
